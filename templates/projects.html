@@ -1,0 +1,38 @@
+{% extends "./base.html" %}
+
+{% block top %}
+  <div class="base-title-ins">
+    <div class="welcome-msg col-sm align-center">
+      <div class="text-shadow" >Welcome to</div>
+    </div>
+    <div class="row text-center">
+      <div class="col-sm align-center">
+        <h1 class="text-shadow"><strong>Michael's Portfolio</strong></h1>
+      </div>
+    </div>
+    <div class="socmed col-sm align-center">
+      <a href="https://www.instagram.com/michaelachd" class="insta fab fa-instagram"></a>
+      <a href="https://www.linkedin.com/in/michael-angelo-chandra-03215b220/" class="insta fab fa-linkedin"></a>
+      <a href="https://github.com/michaelAngelo1" class="insta fab fa-github"></a>
+    </div>
+  </div>
+{% endblock %}
+{% block contents %}
+{% endblock %}
+{% block typewriter %}
+{% endblock %}
+{% block achievements %}
+    
+	<div class="projects" id="content-projects">
+		{% for elem in projects %}
+		<div id="indiv-project">
+			<div id="indiv-project-name">{{ elem.name }}</div>  
+			<div id="indiv-project-date">{{ elem.date }}</div> 
+			<div id="indiv-project-desc">{{ elem.description }}</div> 
+			<div id="indiv-project-tech">{{ elem.techs }}</div> 
+		</div>
+		{% endfor %}
+
+	</div>
+
+{% endblock %}
